@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.music-player {
+  height: 100vh;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 10% 90%;
+  background-color: grey;
+}
+.logo,
+.menu,
+.player {
+  background-color: white;
+}
+.logo {
+  grid-column: 1/3;
+  grid-row: 1/2;
+
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+.menu {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border-right: 2px solid black;
+}
+.player {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 85% 15%;
+}
+.songs {
+  border-bottom: 2px solid black;
+  background-color: maroon;
+  overflow-y: scroll;
+}
+/* .songs-container {
+  height: 100%;
+  background-color: maroon;
+  overflow-y: scroll;
+} */
+.songs::-webkit-scrollbar {
+  display: none;
+}
+.add-songs {
+  margin: 10px;
+  height: 2rem;
+  position: relative;
+  overflow-x: hidden;
+}
+.add-songs__input {
+  opacity: 0;
+}
+.add-songs__btn {
+  position: absolute;
+  height: 2rem;
+  display: block;
+  width: 100%;
+  top: 0;
+}
+.add-songs__btn:hover {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+}
+p {
+  margin: 5px;
+  padding-left: 10px;
+  background-color: rgb(41, 39, 39);
+  color: white;
+  height: 2rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+p:hover {
+  background-color: rgb(246, 222, 222);
+  color: black;
+  cursor: pointer;
+}
+.playing {
+  background-color: rgb(246, 222, 222);
+  color: black;
+}
+.controls {
+  grid-row: 1/2;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+}
+video {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
